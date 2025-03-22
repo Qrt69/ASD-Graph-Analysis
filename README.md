@@ -9,9 +9,9 @@ ABIDE staat voor Autism Brain Imaging Data Exchange. Hieronder volgt een vertali
 ## Projectstructuur
 - **docs/**: begeleidende documenten uit websites, boeken, ...
 - **notebooks/**: Jupyter Notebooks voor data cleaning, analyse en machine learning
-- **src/: Python scripts voor ondersteunende doeleinden
+- **src/**: Python scripts voor ondersteunende doeleinden
 
 ## Data
 De ABIDE dataset kan vrij gedownload worden. In de docs directory staat een README markdown file met toelichting hoe de dataset kan gedownload worden, en welke parameters kunnen meegegeven worden. Voor verdere details verwijs ik graag naar deze tekst, maar alvast al een beknopte toelichting bij de gekozen parameters:
->**pipeline** = cpac (*Configurable Pipeline for the Analysis of Connectomes*). C-PAC is een populaire methode om MRI-scans te verwerken tot data, wereldwijd gebruikt en bijgevolg >beter vergelijkbaar in wetenschappelijke literatuur. Bovendien zijn meerdere handleidingen, voorbeelden en andere resources beschikbaar om te werken met C-PAC verwerkte data.
+>**pipeline** = cpac (*Configurable Pipeline for the Analysis of Connectomes*). C-PAC is een populaire methode om MRI-scans te verwerken tot data, wereldwijd gebruikt en bijgevolg >>beter vergelijkbaar in wetenschappelijke literatuur. Bovendien zijn meerdere handleidingen, voorbeelden en andere resources beschikbaar om te werken met C-PAC verwerkte data.
 >
