@@ -10,6 +10,7 @@ ABIDE staat voor Autism Brain Imaging Data Exchange. Hieronder volgt een vertali
 - **docs/**: begeleidende documenten uit websites, boeken, ...
 - **notebooks/**: Jupyter Notebooks voor data cleaning, analyse en machine learning
 - **src/**: Python scripts voor ondersteunende doeleinden
+- **results/**
 
 ## Data
 De ABIDE dataset kan vrij gedownload worden. In de docs directory staat een README markdown file met toelichting hoe de dataset kan gedownload worden, en welke parameters kunnen meegegeven worden. Voor verdere details verwijs ik graag naar deze tekst, maar alvast al een beknopte toelichting bij de gekozen parameters:
