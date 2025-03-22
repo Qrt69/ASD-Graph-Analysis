@@ -10,9 +10,9 @@ ABIDE staat voor Autism Brain Imaging Data Exchange. Hieronder volgt een vertali
 - **docs/**: begeleidende documenten uit websites, boeken, ...
 - **notebooks/**: Jupyter Notebooks voor data cleaning, analyse en machine learning
 - **src/**: Python scripts voor ondersteunende doeleinden
-- **results/**
+- **results/**: grafieken, visualisaties,...
 
 ## Data
 De ABIDE dataset kan vrij gedownload worden. In de docs directory staat een README markdown file met toelichting hoe de dataset kan gedownload worden, en welke parameters kunnen meegegeven worden. Voor verdere details verwijs ik graag naar deze tekst, maar alvast al een beknopte toelichting bij de gekozen parameters:
 > - ***pipeline*** = 'cpac' (*Configurable Pipeline for the Analysis of Connectomes*). C-PAC is een populaire methode om MRI-scans te verwerken tot data, wereldwijd gebruikt en >>bijgevolg beter vergelijkbaar in wetenschappelijke literatuur. Bovendien zijn meerdere handleidingen, voorbeelden en andere resources beschikbaar om te werken met C-PAC verwerkte >>data.
->- ***Derivative*** = 'rois_cc200'. ROI staat voor Region of Interest, een regio (synaps of zone) in de hersenen. Zo zijn er 200 gedefinieerd die weergegeven worden in de bestanden >>uit de ADIBE dataset.
+>- ***Derivative*** = 'rois_cc200'. ROI staat voor Region of Interest, een regio (synaps of zone) in de hersenen. Zo zijn er 200 gedefinieerd die weergegeven worden in de bestanden >>uit de ADIBE dataset. Meer gedetailleerde toelichting volgt in een afzonderlijk document.
