@@ -22,6 +22,15 @@ De ABIDE dataset kan vrij gedownload worden. In de docs directory staat een READ
 
 In de notebooks/Data_Collection sectie van deze repository staat een script *download_abide_preprocessed_dataset.ipynb*. Dit script wordt ter beschikking gesteld door ABIDE en kan gebruikt worden voor het instellen van de hierboven beschreven parameters. De download geeft, met deze parameters, een totaal van 884 bestanden van het type .1D. Dit zijn de numerieke weergaven van 884 MRI-scans. 
 
-De gegevens over deze personen zijn gegroepeerd in een csv-bestand met de naam *Phenotypic_V1_0b_preprocessed1.csv*. Dit bestand geeft ons een idee over welke personen een MRI-scan ondergingen. Concreet vinden we hier informatie zoals geslacht, leeftijd, plaats van de scan (bijv. New York, Leuven) terug. Uiteraard wordt dit bestand meer in detail bekeken gedurende de concrete data-analyse.
+De gegevens over deze personen zijn samengebracht in een csv-bestand met de naam *Phenotypic_V1_0b_preprocessed1.csv*. Dit bestand geeft ons een idee over welke personen een MRI-scan ondergingen. Concreet vinden we hier informatie zoals geslacht, leeftijd, plaats van de scan (bijv. New York, Leuven) terug. Uiteraard wordt dit bestand meer in detail bekeken gedurende de concrete data-analyse.
 
 Nog dit: ik voegde ook een csv-bestand toe met de 200 hersenregio's (ROI's) die gebruikt worden bij de weergave van de .1D bestanden. Een Python script werd gemaakt om deze regio's visueel weer te geven. Daarnaast werd er ook één hersenscan gevisualiseerd, bij wijze van inleiding. 
+
+## Gebruikte Tools
+
+- **Python** als programmeertaal voor de verwerking van alle data
+- **Neo4j** als graph database voor opslaan en visualiseren van de .1D bestanden. Bovendien is een vlotte interactie mogelijk tussen Python 
+en Neo4j. Binnen deze database zijn de nodes de 200 ROI's in de hersenen, terwijl de edges de connecties zijn die gelegd worden tussen deze
+verschillende regio's.
+
+
