@@ -1,5 +1,6 @@
 # Data files
-data/
+data/*
+!data/CC200.nii.gz
 *.1D
 *.csv
 *.npy
