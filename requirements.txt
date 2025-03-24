@@ -1,0 +1,4 @@
+streamlit
+nilearn
+matplotlib
+numpy
