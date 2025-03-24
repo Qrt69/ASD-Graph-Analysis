@@ -4,25 +4,32 @@ from nilearn import plotting, image
 from nilearn.datasets import load_mni152_template
 from nilearn.plotting import find_xyz_cut_coords
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 # Title clearly displayed
-st.title('🧠 Interactive CC200 ROI Visualization')
+st.title('🧠 Interactieve CC200 ROI Visualisatie')
 
 # Load CC200 atlas only once (cached for performance clearly)
 @st.cache_resource
-def load_atlas():
+def load_data():
     # Explicitly get path based on current file location
     current_dir = Path(__file__).parent
     data_dir = current_dir.parent / 'data'
+
     atlas_file = data_dir / 'CC200.nii.gz'
+    roi_labels_file = data_dir / 'CC200_ROI_labels.csv'
 
     # Load atlas clearly
     atlas_img = image.load_img(str(atlas_file))
-    return atlas_img, atlas_img.get_fdata()
+    atlas_data = atlas_img.get_fdata()
+
+    roi_labels = pd.read_csv((roi_labels_file))
+
+    return atlas_img, atlas_data, roi_labels
 
 
-atlas_img, atlas_data = load_atlas()
+atlas_img, atlas_data, roi_labels = load_data()
 
 # User input clearly and interactively
 roi_number = st.number_input(
@@ -32,6 +39,22 @@ roi_number = st.number_input(
     value=1,
     step=1
 )
+
+# Get clear ROI description
+roi_info = roi_labels[roi_labels['ROI number'] == roi_number]
+
+if not roi_info.empty:
+    harvard_label = roi_info['Harvard-Oxford'].values[0]
+    center_of_mass = roi_info['center of mass'].values[0]
+
+    st.subheader(f"📍 ROI #{roi_number} Informatie:")
+    st.markdown(f"""
+    - **Harvard-Oxford Label:** {harvard_label}  
+    - **Center of Mass (X,Y,Z):** {center_of_mass}  
+    - **Volume (voxels):** {roi_info['volume'].values[0]}  
+    """)
+else:
+    st.warning("ROI informatie is niet gevonden.")
 
 # Mask explicitly selected ROI
 roi_mask = (atlas_data == roi_number)
@@ -60,3 +83,11 @@ plotting.plot_roi(
 )
 
 st.pyplot(fig)
+
+st.markdown("ℹ️ **ROI Volume Toelichting**")
+with st.expander("Zie toelichting 'Volume in voxels'"):
+    st.write(
+        "het volume van een ROI is de som van de aantal voxels in de ROI."
+        "Een voxel is een kleine 3D kubus, typisch 3mm x 3mm x 3mm, "
+        "gebruikt in hersenafbeeldingen om volume te meten."
+        )

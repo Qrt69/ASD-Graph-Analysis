@@ -2,3 +2,4 @@ streamlit
 nilearn
 matplotlib
 numpy
+pandas

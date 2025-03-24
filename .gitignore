@@ -12,3 +12,5 @@ __pycache__/
 # Pycharm files
 .idea/
 *.iml
+
+src/sandbox.ipynb
