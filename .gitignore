@@ -1,6 +1,7 @@
 # Data files
 data/*
 !data/CC200.nii.gz
+!data/CC200_ROI_labels.csv
 *.1D
 *.csv
 *.npy
