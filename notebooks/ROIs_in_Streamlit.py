@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 from nilearn import plotting, image
 from nilearn.datasets import load_mni152_template
 from nilearn.plotting import find_xyz_cut_coords
@@ -11,8 +12,15 @@ st.title('🧠 Interactive CC200 ROI Visualization')
 # Load CC200 atlas only once (cached for performance clearly)
 @st.cache_resource
 def load_atlas():
-    atlas_img = image.load_img(r'C:\ASD Data Science\ASD-Graph-Analysis\data\CC200.nii.gz')
+    # Explicitly get path based on current file location
+    current_dir = Path(__file__).parent
+    data_dir = current_dir.parent / 'data'
+    atlas_file = data_dir / 'CC200.nii.gz'
+
+    # Load atlas clearly
+    atlas_img = image.load_img(str(atlas_file))
     return atlas_img, atlas_img.get_fdata()
+
 
 atlas_img, atlas_data = load_atlas()
 
