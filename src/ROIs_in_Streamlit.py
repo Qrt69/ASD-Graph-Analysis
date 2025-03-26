@@ -7,6 +7,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# paths
+current_dir = Path(__file__).parent
+data_dir = current_dir.parent / 'data'
+img_path =  current_dir.parent / 'docs' / 'img' / 'Brain afbeelding.png'
+
+
 # Title clearly displayed
 st.title('🧠 Interactieve CC200 ROI Visualisatie')
 
@@ -71,7 +77,7 @@ fig = plt.figure(figsize=(10, 8))
 plotting.plot_roi(
     masked_img,
     bg_img=load_mni152_template(),
-    title=f"Interactive Visualization of ROI #{roi_number}",
+    title=f"Interactieve Visualisatie van ROI #{roi_number}",
     draw_cross=True,
     annotate=True,
     cmap='Set1',
@@ -83,6 +89,8 @@ plotting.plot_roi(
 )
 
 st.pyplot(fig)
+
+st.image(str(img_path) ,caption = 'xyz-oriëntatie')
 
 st.markdown("ℹ️ **ROI Volume Toelichting**")
 with st.expander("Zie toelichting 'Volume in voxels'"):
