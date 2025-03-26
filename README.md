@@ -24,7 +24,7 @@ In de notebooks/Data_Collection sectie van deze repository staat een script *dow
 
 De gegevens over deze personen zijn samengebracht in een csv-bestand met de naam *Phenotypic_V1_0b_preprocessed1.csv*. Dit bestand geeft ons een idee over welke personen een MRI-scan ondergingen. Concreet vinden we hier informatie zoals geslacht, leeftijd, plaats van de scan (bijv. New York, Leuven) terug. Uiteraard wordt dit bestand meer in detail bekeken gedurende de concrete data-analyse.
 
-Nog dit: ik voegde ook een csv-bestand toe met de 200 hersenregio's (ROI's) die gebruikt worden bij de weergave van de .1D bestanden. Een Python script werd gemaakt om deze regio's visueel weer te geven. Hierbij heb ik gebruik gemaakt van Streamlit. Om deze Streamlit app toegankelijk te maken, werd het bestand CC200.nii.gz expliciet wél toegevoegd aan de data folder, Streamlit kan immers niet deployen vanuit lokale data. Via deze link kan u een ROI naar keuze selecteren en visualiseren: [ROI in Streamlit](https://qrt69-asd-graph-analysis-notebooksrois-in-streamlit-i1qfvl.streamlit.app).
+Nog dit: ik voegde ook een csv-bestand toe met de 200 hersenregio's (ROI's) die gebruikt worden bij de weergave van de .1D bestanden. Een Python script werd gemaakt om deze regio's visueel weer te geven. Hierbij heb ik gebruik gemaakt van Streamlit. Om deze Streamlit app toegankelijk te maken, werd het bestand CC200.nii.gz expliciet wél toegevoegd aan de data folder, Streamlit kan immers niet deployen vanuit lokale data. Via deze link kan u een ROI naar keuze selecteren en visualiseren: [ROI in Streamlit](https://roi-visualisatie.streamlit.app).
 
 ## Gebruikte Tools
 
