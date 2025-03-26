@@ -90,7 +90,7 @@ plotting.plot_roi(
 
 st.pyplot(fig)
 
-st.image(str(img_path) ,caption = 'xyz-oriëntatie')
+st.image(str(img_path) ,caption = 'xyz-oriëntatie', width = 250)
 
 st.markdown("ℹ️ **ROI Volume Toelichting**")
 with st.expander("Zie toelichting 'Volume in voxels'"):
